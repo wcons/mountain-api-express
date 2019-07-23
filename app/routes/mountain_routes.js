@@ -1,8 +1,9 @@
 // Express docs: http://expressjs.com/en/api.html
 const express = require('express')
 // Passport docs: http://www.passportjs.org/docs/
-const passport = require('passport')
-
+// const passport = require('passport')
+const customErrors = require('../../lib/custom_errors')
+const handle404 = customErrors.handle404
 // pull in Mongoose model for examples
 const Mountain = require('../models/mountain')
 
@@ -40,6 +41,13 @@ router.get('/mountains', (req, res, next) => {
     // respond with status 200 and JSON of the examples
     .then(mountains => res.status(200).json({ mountains: mountains }))
     // if an error occurs, pass it to the handler
+    .catch(next)
+})
+
+router.get('/mountains/:id', (req, res, next) => {
+  Mountain.findById(req.params.id)
+    .then(handle404)
+    .then(mountain => res.status(200).json({ mountain: mountain.toObject() }))
     .catch(next)
 })
 
