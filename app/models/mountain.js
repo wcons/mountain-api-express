@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const mountainSchema = new mongoose.Schema({
-  peak: {
+  name: {
     type: String,
     required: true
   },
