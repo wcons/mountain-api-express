@@ -35,7 +35,9 @@ I originally planned to use MongoDB, then realized as I did my entity-relationsh
 
 ### ERD
 
-(shared on google drive, needs to go on imgur)
+[Current ERD](https://i.imgur.com/QDsB9zG.jpg)
+
+[ERD for planned future functionality](https://i.imgur.com/nIVRQOo.jpg)
 
 ### API Routes
 
