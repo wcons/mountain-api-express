@@ -37,12 +37,14 @@ I originally planned to use MongoDB, then realized as I did my entity-relationsh
 
 ### API Routes
 
-/sign-up
-/sign-in
-/change-password
-/sign-out
-/mountains
-/mountain/:id
-/mountains/:id/edit
+* /sign-up
+* /sign-in
+* /change-password
+* /sign-out
+* /mountains
+* /mountain/:id
+* /mountains/:id/edit
 
 ### Installation & Setup instructions
+
+There are no special set-up insctructions or additional components to install at this time.
